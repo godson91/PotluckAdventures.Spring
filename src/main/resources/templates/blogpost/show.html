@@ -1,0 +1,24 @@
+<!-- this will be my show page to show a single post -->
+
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	    <link href="../../webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	    <link href="../../css/standard.css" rel="stylesheet">
+</head>
+<body>
+	<div class = "container">
+
+		<p> th:object="$posts.title"</p>
+		<p> th:object="$posts.author"</p>
+		<p> th:object="$posts.blog_entry"</p>
+	
+	</div>
+	<script src="../../webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="../../webjars/jquery/1.9.1/jquery.min.js"></script>
+	</div>
+</body>
+</html>
