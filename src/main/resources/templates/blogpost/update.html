@@ -1,6 +1,3 @@
-<!-- this will be my show page to show a single post -->
-
-
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -14,17 +11,24 @@
 		<div th:replace="fragments/navbar :: navbar"></div>
 		
 		
-	<!-- <form action = "#" th:action="@{/}" th:object="${blogpost}" method="get"> -->	
+ <form th:object="${posts}" th:action="@{'/blogpost/{id}'(id=${id})}" th:method="put">
+	<div class="form-group">
+	<label>Title</label>
+		 	<input type="text" class="form-control" th:field="*{title}"/>
+	</div>
+	<div class="form-group">
+		<label>Author</label>
+		 	<input type="text" class="form-control" th:field="*{author}"/>
+	</div>
+	<div class="form-group">
+			<label>Blog Entry</label>
+		<input type="text" class="form-control" th:field="*{blog_entry}"/>
+	</div>
+	<button type="submit" class="btn btn-warning"> update this post</button>
+ </form>
+ 
+ 
 	<!-- <a th:href="@{/}">GO HOME</a> -->	
-	<div class="panel panel-success">
-		<div class="panel-heading">
-			<h1 th:text="*{posts.title}"></h1>
-		</div>
-		<div class="panel-body">
-			<h3 th:text="*{posts.author}"></h3>
-			<h3 th:text="*{posts.blog_entry}"></h3>
-			
-		</div>
 	
 	</div>
 	
